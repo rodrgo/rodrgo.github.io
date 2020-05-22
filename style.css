@@ -24,6 +24,22 @@ li {
 	margin:0 0 10px 0;   
    }
 
+.fa {
+  height: 30px;
+  text-align: center;
+  text-decoration: none;
+  padding: 0px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-medium {
+  background: white;
+  color: black;
+}
+
 a.customisable-highlight { color: green; }
 h1.summary { display: none!; }
 
@@ -40,17 +56,6 @@ h3#nocap:first-letter {
   font-family: 'Permanent Marker', serif;
   padding:0;
   color: #a21919;
-  font-size: 35pt; margin: 0;
-	text-align: center;
-}
-.nameheader:hover {
-  color: #CC3300;
-  text-decoration:none;
-}
-
-.section {
-  text-decoration:none;
-  font-family: 'Permanent Marker', serif;
   font-size: 25pt;
   color: #0D3F80;
 	text-align: center;
@@ -85,8 +90,6 @@ h3#nocap:first-letter {
 a.bibitem {
 	font-style: italic;
 }
-
-
 
 .centered{
 	max-width: 580px;
