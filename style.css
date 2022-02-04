@@ -100,9 +100,9 @@ a.bibitem {
 
 body {
   font-family: 'Pontano Sans', serif;
-	max-width: 900px;
-	margin: 0 auto;
-	font-size: 13pt;
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 13pt;
 	text-justify: inter-word;
 	hyphens: auto;
 	-webkit-hyphens: auto;
