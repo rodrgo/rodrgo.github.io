@@ -41,7 +41,7 @@ li {
 }
 
 a.customisable-highlight { color: green; }
-h1.summary { display: none!; }
+h1.summary { display: none !important; }
 
 h3#nocap:first-letter {
   text-transform: lowercase!important;
@@ -58,7 +58,12 @@ h3#nocap:first-letter {
   color: #a21919;
   font-size: 25pt;
   color: #0D3F80;
-	text-align: center;
+	text-align: left;
+	white-space: nowrap;
+	display: block;
+}
+.section {
+  margin-right: 15px;
 }
 .section:hover {
   color: #4444FF;
@@ -71,8 +76,19 @@ h3#nocap:first-letter {
 #pic {
 	float: left;
 	width: 220px;
+	max-width: 100%;
 	margin-right: 15px;
 	margin-bottom: 15px;
+}
+
+@media (max-width: 480px) {
+  #pic {
+    width: 100%;
+    max-width: 150px;
+    float: none;
+    display: block;
+    margin: 0 auto 15px;
+  }
 }
 
 .container {
@@ -100,14 +116,95 @@ a.bibitem {
 
 body {
   font-family: 'Pontano Sans', serif;
-    max-width: 900px;
-    margin: 0 auto;
-    font-size: 13pt;
-	text-justify: inter-word;
-	hyphens: auto;
-	-webkit-hyphens: auto;
-	-moz-hyphens: auto;
-	-ms-hyphens: auto;
-	-o-hyphens: auto;
-};
+  font-size: 13pt;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 180px;
+  height: 100vh;
+  padding: 20px;
+  padding-right: 10px;
+  background-color: #f8f8f8;
+  border-right: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+.main-content {
+  margin-left: calc((100vw + 220px - 900px) / 2);
+  padding: 20px;
+  padding-top: 90px;
+  max-width: 900px;
+  min-width: 0;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1400px) {
+  .main-content {
+    margin-left: 220px;
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    padding: 20px;
+    padding-right: 10px;
+  }
+  
+  .main-content {
+    margin-left: 220px;
+    margin-right: 20px;
+    padding: 15px;
+    padding-top: 90px;
+    max-width: calc(100vw - 260px);
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    padding: 20px;
+    padding-right: 10px;
+  }
+  
+  .main-content {
+    margin-left: 220px;
+    margin-right: 10px;
+    padding: 10px;
+    padding-top: 90px;
+    max-width: calc(100vw - 250px);
+  }
+  
+  .sidebar .nameheader {
+    font-size: 14pt;
+    margin-bottom: 20px;
+  }
+}
+
+.sidebar .nameheader {
+  margin-bottom: 30px;
+  display: block;
+  text-align: right;
+  font-size: 16pt;
+}
+
+.sidebar .section {
+  display: block;
+  margin-bottom: 8px;
+  margin-right: 0;
+  padding: 3px 0;
+  text-align: right;
+}
 
